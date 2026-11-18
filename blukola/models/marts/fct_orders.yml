@@ -1,0 +1,60 @@
+models:
+  - name: fct_orders
+    description: "Order-level fact table containing customer details, order status, item counts, order subtotal and total successful payments. One row per order."
+
+    columns:
+      - name: order_id
+        description: "The unique key of the orders mart."
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_name
+        description: "The name of the customer who placed the order."
+        data_tests:
+          - not_null
+
+      - name: order_status
+        description: "The status of the order, which can be one of the following values: placed, shipped, delivered, or cancelled."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['placed', 'shipped', 'delivered', 'cancelled']
+
+      - name: order_date
+        description: "The date the order was placed."
+        data_tests:
+          - not_null
+
+      - name: order_item_lines
+        description: "The count of distinct order item lines for the order."
+        data_tests:
+          - not_null
+
+      - name: order_items_subtotal
+        description: "The sum of the product of quantity and unit_price of all order items."
+        data_tests:
+          - not_null
+
+      - name: total_quantity
+        description: The total quantity of items ordered for the order.
+        data_tests:
+          - not_null
+
+      - name: total_successful_payments
+        description: "The sum of all successful payments for the order."
+        data_tests:
+          - not_null
+
+      - name: outstanding_amount
+        description: "The difference between the order items subtotal and the total successful payments to identify any outstanding balances."
+        data_tests:
+          - not_null
+
+      - name: payment_status
+        description: "The status of the payment for the order, which can be one of the following values: fully_paid, partially_paid, unpaid, overpaid"
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ['fully_paid', 'partially_paid', 'unpaid', 'overpaid']
+     
+          

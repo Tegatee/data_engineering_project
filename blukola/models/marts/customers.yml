@@ -1,0 +1,49 @@
+models:
+  - name: customers
+    description: "Customer overview data mart, offering key details for each unique customer. One row per customer."
+
+    columns:
+      - name: customer_id
+        description: "The unique identifier for each customer."
+        data_tests:
+          - not_null
+          - unique
+      - name: customer_name
+        description: "Customers' full name."
+        data_tests:
+          - not_null
+      - name: email
+        description: "Customers' email address."
+        data_tests:
+          - not_null
+          
+      - name: city
+        description: "The city where the customer resides."
+      - name: signed_up_at
+        description: "The timestamp when the customer signed up."
+        data_tests:
+          - not_null
+      - name: count_lifetime_orders
+        description: "Total number of orders a customer has ever placed."
+        data_tests:
+          - not_null
+      - name: lifetime_successful_payments
+        description: "Total amount of successful payments a customer has ever made."
+        data_tests:
+          - not_null
+      - name: total_failed_payment_amount
+        description: "The total amount of failed payments a customer has ever made."
+        data_tests:
+          - not_null
+      - name: first_order_date
+        description: "The timestamp of the first order placed by the customer."
+
+      - name: last_order_date
+        description: "The timestamp of the most recent order placed by the customer."
+
+      - name: customer_type
+        description: "The type of customer with values: prospective, new and returning. Prospective customers have not placed any orders, new customers have placed exactly one order, and returning customers have placed more than one order."
+        data_tests:
+          - accepted_values:
+              arguments:
+                values: ["prospective","new", "returning"]

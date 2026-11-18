@@ -1,0 +1,40 @@
+product_id,product_name,category,unit_price
+1,Ankara Shirt,Fashion,17800
+2,Senator Wear Set,Fashion,53450
+3,Ankara Gown,Fashion,33250
+4,Sneakers,Fashion,38000
+5,Leather Sandals,Fashion,14250
+6,Agbada Set,Fashion,101000
+7,Denim Jeans,Fashion,21400
+8,Polo T-Shirt,Fashion,10100
+9,Handbag,Fashion,26150
+10,Wrist Watch,Fashion,41600
+11,Wireless Earbuds,Electronics,29700
+12,Phone Case,Electronics,4150
+13,Power Bank 20000mAh,Electronics,21400
+14,Bluetooth Speaker,Electronics,33250
+15,32-inch Smart TV,Electronics,196000
+16,Laptop Backpack,Electronics,16650
+17,USB-C Charger,Electronics,7700
+18,Ring Light,Electronics,14850
+19,Smartwatch,Electronics,49900
+20,Rechargeable Fan,Electronics,28500
+21,Rice 50kg,Groceries,83150
+22,Vegetable Oil 5L,Groceries,17250
+23,Noodles Carton,Groceries,10100
+24,Garri 10kg,Groceries,11300
+25,Honey Beans 5kg,Groceries,9750
+26,Tomato Paste Carton,Groceries,22000
+27,Spaghetti Carton,Groceries,18400
+28,Chocolate Drink 900g,Groceries,8100
+29,Powdered Milk 900g,Groceries,11300
+30,Non-stick Pot Set,Home,45150
+31,Bedsheet Set,Home,20800
+32,Standing Fan,Home,53450
+33,Blender,Home,30900
+34,Electric Kettle,Home,14250
+35,Shea Butter 500g,Beauty,5350
+36,Hair Oil,Beauty,4500
+37,Perfume,Beauty,21400
+38,Body Lotion,Beauty,7700
+39,Face Wash,Beauty,6200
