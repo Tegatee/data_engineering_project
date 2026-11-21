@@ -2,7 +2,12 @@ with
 
 products as (
 
-    select * from {{ ref('stg_products') }}
+    select
+        product_id,
+        product_name,
+        category,
+        product_price
+    from {{ ref('stg_products') }}
 
 )
 

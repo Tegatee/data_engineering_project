@@ -1,0 +1,30 @@
+models:
+  - name: products
+    description: "Product-level dimension table containing product details, including product name, category and product_price."
+
+    columns:
+      - name: product_id
+        description: "The unique identifier for the product."
+        data_tests:
+          - not_null
+          - unique
+
+      - name: product_name
+        description: "The name of the product."
+        data_tests:
+          - not_null
+
+      - name: category
+        description: "The category to which the product belongs."
+        data_tests:
+          - not_null
+
+      - name: product_price
+        description: "The price of the product."
+        data_tests:
+          - not_null
+          - dbt_utils.expression_is_true:
+              arguments:
+                expression: "product_price > 0"
+
+   
